@@ -1,0 +1,51 @@
+.blog-list
+  display: flex
+  flex-wrap: wrap
+
+  .blog-post
+    box-shadow()
+    width 30%
+    margin bodyMargin
+    padding 50px 15px
+    position relative
+
+    @media screen and (max-width: 800px)
+      width 46%
+      margin 2%
+
+    @media screen and (max-width: 600px)
+      width 100%
+      margin 20px 0
+
+    .blog-id
+      position: absolute
+      top 0
+      right 0
+      box-shadow()
+      padding 5px
+
+     .blog-title
+       font-size 20px
+
+     .blog-body
+       text-align: justify
+
+     .blog-user-id
+       position absolute
+       bottom: 0
+       left: 0
+       width 100%
+       background black
+       color white
+       padding 10px
+
+       &:before
+         content: 'User ID: '
+
+       &:hover
+          box-shadow()
+          background white
+          color black
+          cursor pointer
+
+       transition(all, ease-in)

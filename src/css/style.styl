@@ -1,116 +1,12 @@
-//Import Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//Import global variables and mixins
+@import '/global/variables'
+@import '/global/mixins'
 
-//Fonts
-fontRoboto = 'Roboto', sans-serif
-fontNunito = 'Nunito', sans-serif
+//Import app styles
+@import '/display/app'
 
-//Colours
-colorGrey = #efefef
-colorDarkGrey = #dddddd
+//Import form styles
+@import '/form/select'
 
-//Variables
-bodyMargin = 1.666666%
-
-//Mixins
-box-shadow()
-  box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.25)
-  border: 1px solid colorDarkGrey
-
-select-wrapper()
-  background-color: colorGrey
-  border-radius: 5px
-  position: relative
-  box-shadow()
-  select
-    appearance: none
-    border: none
-    background: none
-    width: 100%
-    padding: 10px
-    border-radius: 0px
-  &:after
-    content: ''
-    width: 0
-    height: 0
-    border-left: 5px solid transparent
-    border-right: 5px solid transparent
-    border-top: 5px solid black
-    position: absolute
-    right 10px
-    top 19px
-
-app-title()
-  text-transform: uppercase
-  font-size: 28pt
-  margin-bottom: 0
-
-transition(element, effect)
-  transition: element 0.5s effect
-
-body
-  font-family: fontRoboto
-  max-width: 1200px
-  margin 0 auto
-
-
-.app-container
-  padding 5%
-  header
-    margin bodyMargin
-    margin-bottom: 30px
-    .app-title
-      app-title()
-    .app-description
-      font-style: italic
-
-.app-form
-  margin bodyMargin
-  .select-wrapper
-    select-wrapper()
-
-.app-body
-  padding 10px
-
-.blog-list
-  display: flex
-  flex-wrap: wrap
-  .blog-post
-    box-shadow()
-    width 30%
-    margin bodyMargin
-    padding 50px 15px
-    position relative
-    @media screen and (max-width: 800px)
-      width 46%
-      margin 2%
-    @media screen and (max-width: 600px)
-      width 100%
-      margin 20px 0
-    .blog-id
-      position: absolute
-      top 0
-      right 0
-      box-shadow()
-      padding 5px
-     .blog-title
-       font-size 20px
-     .blog-body
-       text-align: justify
-     .blog-user-id
-       position absolute
-       bottom: 0
-       left: 0
-       width 100%
-       background black
-       color white
-       padding 10px
-       transition(all, ease-in)
-       &:before
-         content: 'User ID: '
-       &:hover
-          box-shadow()
-          background white
-          color black
-          cursor pointer
+//Import blog styles
+@import '/display/blog'

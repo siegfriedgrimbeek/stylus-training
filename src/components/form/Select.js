@@ -8,14 +8,13 @@ const Select = ({options, handleChange}) => {
   });
 
   return (
-    <div className="select-wrapper">
-      <select className="select" onChange={handleChange} defaultValue="">
-        <option value="" disabled>Please select an option</option>
-        {optionsList}
-      </select>
-    </div>
-
-);
+      <div className="select-wrapper">
+        <select className="input-select" onChange={handleChange} defaultValue="">
+          <option value="" disabled>Please select an option</option>
+          {optionsList}
+        </select>
+      </div>
+  );
 }
 
 export default Select;

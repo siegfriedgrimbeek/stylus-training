@@ -16,6 +16,7 @@ body {
   text-transform: uppercase;
   font-size: 28pt;
   margin-bottom: 0;
+  color: #f00;
 }
 .app-container header .app-description {
   font-style: italic;
@@ -23,14 +24,17 @@ body {
 .app-form {
   margin: 1.666666%;
 }
-.app-form .select-wrapper {
+.app-body {
+  padding: 10px;
+}
+.select-wrapper {
   background-color: #efefef;
   border-radius: 5px;
   position: relative;
   box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.25);
   border: 1px solid #ddd;
 }
-.app-form .select-wrapper select {
+.select-wrapper .input-select {
   appearance: none;
   border: none;
   background: none;
@@ -38,7 +42,7 @@ body {
   padding: 10px;
   border-radius: 0px;
 }
-.app-form .select-wrapper:after {
+.select-wrapper:after {
   content: '';
   width: 0;
   height: 0;
@@ -48,9 +52,6 @@ body {
   position: absolute;
   right: 10px;
   top: 19px;
-}
-.app-body {
-  padding: 10px;
 }
 .blog-list {
   display: flex;

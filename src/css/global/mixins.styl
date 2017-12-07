@@ -1,0 +1,36 @@
+//Mixins
+box-shadow()
+  box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.25)
+  border: 1px solid colorDarkGrey
+
+select-wrapper()
+  background-color: colorGrey
+  border-radius: 5px
+  position: relative
+  box-shadow()
+  .input-select
+    appearance: none
+    border: none
+    background: none
+    width: 100%
+    padding: 10px
+    border-radius: 0px
+  &:after
+    content: ''
+    width: 0
+    height: 0
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-top: 5px solid black
+    position: absolute
+    right 10px
+    top 19px
+
+app-title()
+  text-transform: uppercase
+  font-size: 28pt
+  margin-bottom: 0
+  color: red
+
+transition(element, effect)
+  transition: element 0.5s effect
